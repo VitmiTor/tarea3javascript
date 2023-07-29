@@ -1,9 +1,6 @@
 "use strict";
 
-const {
-  generarEnteroAleatorio,
-  generarDecimalAleatorio,
-} = require("../utilities/randomUtilities");
+const { generarEnteroAleatorio } = require("../utilities/randomUtilities");
 
 const promedioPonderado = (cantidadN, arrayNumbers, arrayPesos) => {
   let sumatoria = 0;

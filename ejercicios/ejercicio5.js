@@ -7,7 +7,7 @@ const {
 
 const calcularMediaGeometrica = (arrayNumbers, cantidadN) => {
   let producto = 1;
-  for (let i; i < cantidadN; i++) {
+  for (let i = 0; i < cantidadN; i++) {
     const numeroAleatorio = generarEnteroAleatorio(100, 999);
     arrayNumbers.push(numeroAleatorio);
     producto = producto * arrayNumbers[i];
