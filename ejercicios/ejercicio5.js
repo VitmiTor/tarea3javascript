@@ -6,8 +6,7 @@ const { arrayAleatorio } = require("../utilities/arrayUtiliites");
 const calcularMediaGeometrica = (arrayNumbers) => {
   let producto = 1;
   arrayNumbers.forEach((element) => {
-    console.log(element);
-    producto = producto * element;
+    producto *= element;
   });
   return Math.pow(producto, 1 / arrayNumbers.length);
 };

@@ -1,7 +1,8 @@
 "use strict";
 
 const { generarEnteroAleatorio } = require("../utilities/randomUtilities");
-const { arrayAleatorio, esCapicua } = require("../utilities/arrayUtiliites");
+const { arrayAleatorio } = require("../utilities/arrayUtiliites");
+const { esCapicua } = require("../utilities/anotherUtilities");
 
 const poblarArrays = (arrayNuevo, arrayCapicua, arrayNotCapicua) => {
   arrayNuevo.forEach((element) => {

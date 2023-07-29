@@ -12,14 +12,13 @@ const promedioPonderado = (arrayNumbers, arrayPesos) => {
   return sumatoria / arrayNumbers.length;
 };
 
-//sumatoria += arrayNumbers[i] * arrayPesos[i];
 const imprimirMensaje = (arrayNumbers, arrayPesos, promedio) => {
   console.log(
     `el array de numeros es ${arrayNumbers} y el array de Pesos ${arrayPesos} y su promedio ponderado es ${promedio}`
   );
 };
 
-const cantidadN = 4; //generarEnteroAleatorio(1, 10);
+const cantidadN = generarEnteroAleatorio(1, 50);
 const arrayNumbers = arrayAleatorio(cantidadN, 100, 1000);
 const arrayPesos = arrayAleatorio(cantidadN, 1, 50);
 
