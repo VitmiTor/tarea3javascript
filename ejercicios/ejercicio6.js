@@ -1,18 +1,14 @@
 "use strict";
 
-const {
-  generarEnteroAleatorio,
-  generarDecimalAleatorio,
-} = require("../utilities/randomUtilities");
+const { generarEnteroAleatorio } = require("../utilities/randomUtilities");
+const { arrayAleatorio } = require("../utilities/arrayUtiliites");
 
-const calcularMediaArmonica = (arrayNumber, cantidadN) => {
+const calcularMediaArmonica = (arrayNumber) => {
   let resultado = 0;
-  for (let i = 0; i < cantidadN; i++) {
-    const numeroAleatorio = generarEnteroAleatorio(1, 40);
-    arrayNumber.push(Math.pow(numeroAleatorio, -1));
-    resultado += arrayNumber[i];
-  }
-  return cantidadN / resultado;
+  arrayNumber.forEach((element) => {
+    resultado += Math.pow(element, -1);
+  });
+  return arrayNumber.length / resultado;
 };
 
 const imprimirMensaje = (cantidadN, resultado) => {
@@ -21,7 +17,7 @@ const imprimirMensaje = (cantidadN, resultado) => {
   );
 };
 
-const arrayNumber = [];
 const cantidadN = generarEnteroAleatorio(1, 10);
-const resultado = calcularMediaArmonica(arrayNumber, cantidadN);
+const arrayNumber = arrayAleatorio(cantidadN, 100, 999);
+const resultado = calcularMediaArmonica(arrayNumber);
 imprimirMensaje(cantidadN, resultado);
