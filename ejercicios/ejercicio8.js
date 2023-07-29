@@ -2,7 +2,7 @@
 
 const { generarEnteroAleatorio } = require("../utilities/randomUtilities");
 const { arrayAleatorio } = require("../utilities/arrayUtiliites");
-const {esPrimo}=require("../utilities/anotherUtilities")
+const { esPrimo } = require("../utilities/algorithmsUtilities");
 
 const poblarArrays = (listaNumbers, listaPrimos, listaCompuestos) => {
   listaNumbers.forEach((value) => {
